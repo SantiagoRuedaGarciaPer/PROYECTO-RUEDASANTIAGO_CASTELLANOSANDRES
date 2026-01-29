@@ -1,0 +1,123 @@
+/* Reglas generales */
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url(../assets/fonts/myriad-pro/MYRIADPRO-REGULAR.OTF)
+}
+:root{
+    font-family: 'Myriad Pro Regular';
+}
+
+
+/* Animaciones */
+@keyframes showImg {
+    from{
+        display: none;
+        opacity: 0;
+        
+    }
+    to{
+        
+        opacity: 1;
+        
+    }
+}
+
+@keyframes disapear {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* el fondo */
+body{
+    background-color: black;
+    width: 99%;
+    height: 96vh;
+    background-image: url(../assets/imgs/pexels-pixabay-159400.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Logo que aparece en el principio */
+.container{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: showImg 3s, disapear 3s 3s;
+    animation-fill-mode: forwards;
+    
+}
+.kario_logo{
+    width: 100px;
+}
+
+/* Login */
+.login_container{
+    display: none;        
+
+    animation: showImg 2s 6s allow-discrete;
+    display: block;
+    animation-fill-mode: forwards;
+
+    color: gray;
+    background-color: white;
+    width: 50vh;
+    height: min-content;
+    padding: 2% 20% 10%;
+    border-radius: 50px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+    /* Titulo/header del login */
+.title{
+    justify-items: center;
+    margin-bottom: 20px;
+    
+}
+.kario_logo, .kario_texto{
+    margin: 0px 10px;
+}
+small{
+    margin-top: 15px;
+}
+.kario_h1{
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+    /* Formulario del login */
+.datos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+label{
+    justify-self: left;
+    margin: 10px;
+}
+input{
+    border-radius: 15px;
+}
+button{
+    padding: 20px 40px;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 40px;
+    background-color: #ff721b;
+    color: white;
+}
+.terminos{
+    display: block;
+}
