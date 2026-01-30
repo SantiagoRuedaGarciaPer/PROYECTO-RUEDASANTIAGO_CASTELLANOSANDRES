@@ -137,6 +137,6 @@ button{
 }
 
 
-button:active ~ .formulario{
+form:has(button:active){
     display: none;
 }
