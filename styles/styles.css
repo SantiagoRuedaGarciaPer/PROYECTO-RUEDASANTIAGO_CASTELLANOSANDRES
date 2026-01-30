@@ -26,11 +26,13 @@
         
         opacity: 0;
     }
+    
     to{
+        
         visibility: visible;
         opacity: 1;
-        width: 50vh;
-        height: min-content;
+        
+        padding: 2% 20% 10%;
     }
 }
 
@@ -60,7 +62,8 @@ body{
 
 /* Logo que aparece en el principio */
 .container{
-    
+    width: 99%;
+    height: 96vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,8 +78,12 @@ body{
 /* Login */
 .login_container{
     visibility: hidden;
-    width: 0;
-    height: 0;
+    width: 50vh;
+    height: min-content;
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+    
     animation: showDiv 1s 6s;
     
     animation-fill-mode: forwards;
@@ -84,7 +91,7 @@ body{
     color: gray;
     background-color: white;
     
-    padding: 2% 20% 10%;
+    
     border-radius: 50px;
     align-self: center;
     justify-self: center;
@@ -136,7 +143,3 @@ button{
     display: block;
 }
 
-
-form:has(button:active){
-    display: none;
-}
