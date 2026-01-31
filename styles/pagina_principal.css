@@ -28,24 +28,32 @@
     }
 }
 
+@keyframes imgDisapear{
+    from{
+        background-image: url("../assets/imgs/pexels-pixabay-159400.png");
+    }
+    to{
+        background-image: none;
+        background-color: white;
+    }
+}
+
 .kario_logo{
     width: 100px;
 }
 
-body{
+/*body{
     width: 98%;
     height: 96vh;
     background-image: url("../assets/imgs/pexels-pixabay-159400.png");
-    background-color: black;
-    
-    
-}
+    background-color: black; 
+}*/
 .container_img{
     height: 100%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
-    animation: showImg 2s, disapear 2s 2s;
+    animation: showImg 2s, disapear 2s 2s; 
     animation-fill-mode: forwards;
 }
 .kario_logo{
@@ -53,12 +61,12 @@ body{
 }
 
 .inicio{
-    display: block;
+    display: none;
     text-align: center;
     justify-self: center;
     align-self: center;
     visibility: hidden;
-    animation: showDiv 2s 4s;
+    animation: showDiv 2s 4s, disapear 2s 3s;
     animation-fill-mode: forwards;
     background-color: white;
     width: fit-content;
@@ -67,8 +75,59 @@ body{
     border-radius: 50px;
     margin-top: 15%;
 }
+body{
+    animation: imgDisapear 0.1s 6s;
+    animation-fill-mode: forwards;
+}
+
 @media (max-width: 600px) {
     .inicio{
         margin-top: 50%;
     }
+}
+
+.Descripcion{
+    width: 200px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.row{
+    border: 1px solid black;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+    margin: 12px;
+    padding: 12px 20px;
+}
+.completition{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+.red {
+  border: 5px solid red;
+}
+
+.green {
+  border: 5px solid green;
+}
+.yellow{
+    border: 5px solid yellow;
+}
+span{
+    margin: 10px;
+}
+.article_container{
+    padding: 10%;
 }
