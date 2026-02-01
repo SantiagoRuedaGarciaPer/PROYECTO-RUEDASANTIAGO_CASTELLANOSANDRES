@@ -1,0 +1,95 @@
+
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url(../assets/fonts/myriad-pro/MYRIADPRO-REGULAR.OTF)
+}
+
+:root{
+    font-family: 'Myriad Pro Regular';
+}
+
+
+.tabla_contenido {
+    flex: 1;                      
+    display: flex;
+    justify-content: center;      
+}
+
+.tabla_contenido ul {
+    display: flex;                
+    flex-direction: row;          
+    gap: 15px;                    
+    list-style: none;             
+    align-items: center;          
+    margin: 0;                    
+    padding: 0;                   
+}
+
+
+.container {
+    background-color: white;      
+    display: flex;                
+    flex-direction: column;       
+    min-height: 100vh;            
+}
+
+
+.barra_superior {
+    font-size: 25px;              
+    position: fixed;              
+    z-index: 1000;                
+    color: black;
+    display: flex;                
+    flex-direction: row;          
+    align-items: center;          
+    width: 100%;                  
+    background-color: white;      
+    padding: 0;                   
+    justify-content: space-between;
+    height: 50px;                 
+    border-bottom: 2px solid grey;
+}
+
+.footer_superior {
+    display: flex;
+    justify-content: space-between;
+    width: 8%;                    
+    padding: 0 20px;              
+    align-items: center;          
+    margin-right: 10px;
+}
+
+
+.boton {
+    display: flex;                
+    align-items: center;          
+    margin: 10px;                 
+    cursor: pointer;              
+    background-color: white;      
+    border-radius: 10px;          
+    text-align: center;           
+    transition: all 0.3s ease;    
+}
+
+.boton a {
+    display: flex;                
+    align-items: center;          
+    gap: 8px;                     
+    padding: 10px 20px;           
+    color: black;                 
+    text-decoration: none;        
+    white-space: nowrap;          
+    transition: color 0.3s ease;  
+    border-radius: 10px;          
+}
+
+.boton img {
+    width: 40px;                  
+    height: 30px;                 
+    flex-shrink: 0;               
+}
+
+.boton--hover:hover {
+    transform: scale(0.90);       
+    border-color: orange;         
+}

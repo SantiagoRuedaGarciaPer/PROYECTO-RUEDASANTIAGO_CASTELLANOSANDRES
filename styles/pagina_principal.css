@@ -42,15 +42,15 @@
     width: 100px;
 }
 
-/*body{
+body{
     width: 98%;
     height: 96vh;
     background-image: url("../assets/imgs/pexels-pixabay-159400.png");
     background-color: black; 
-}*/
+}
 .container_img{
     height: 100%;
-    display: none;
+    display: grid;
     align-items: center;
     justify-content: center;
     animation: showImg 2s, disapear 2s 2s; 
@@ -59,24 +59,34 @@
 .kario_logo{
     width: 100px;
 }
-
+.inicio_container{
+    /*display: none; Eliminar ahorita*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: disapear 3s 8s;
+    animation-fill-mode: forwards;
+}
 .inicio{
-    display: none;
+    /*display: none;eliminar ahorita*/
+    animation:showDiv 3s 4s;
     text-align: center;
     justify-self: center;
     align-self: center;
     visibility: hidden;
-    animation: showDiv 2s 4s, disapear 2s 3s;
-    animation-fill-mode: forwards;
+    
     background-color: white;
     width: fit-content;
     height: min-content;
     padding: 2% 10% 5%;
     border-radius: 50px;
-    margin-top: 15%;
+    
+
 }
 body{
-    animation: imgDisapear 0.1s 6s;
+    animation: imgDisapear 3s 5s;
     animation-fill-mode: forwards;
 }
 
@@ -129,5 +139,18 @@ span{
     margin: 10px;
 }
 .article_container{
-    padding: 10%;
+    padding: 30px 0px;
+    text-align: center;
+}
+article{
+    padding: 10px 10%;
+}
+.añadir{
+    background-color: #ff721b;
+    color: white;
+    font-size: bold;
+    border: 0px;
+    border-radius: 30px;
+    height: 50px;
+    width: 250px;
 }
