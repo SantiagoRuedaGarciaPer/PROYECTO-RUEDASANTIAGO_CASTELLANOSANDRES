@@ -1,95 +1,108 @@
-
+/* Carga la fuente personalizada desde la carpeta de assets */
 @font-face {
     font-family: 'Myriad Pro Regular';
     src: url(../assets/fonts/myriad-pro/MYRIADPRO-REGULAR.OTF)
 }
 
+/* Aplica la fuente a toda la página */
 :root{
     font-family: 'Myriad Pro Regular';
 }
 
+/* MENÚ DE NAVEGACIÓN */
 
+/* Contenedor del menú (centro de la barra) */
 .tabla_contenido {
-    flex: 1;                      
+    flex: 1;                       /* Ocupa todo el espacio disponible */
     display: flex;
-    justify-content: center;      
+    justify-content: center;       /* Centra el menú horizontalmente */
 }
 
+/* Lista de botones del menú */
 .tabla_contenido ul {
-    display: flex;                
-    flex-direction: row;          
-    gap: 15px;                    
-    list-style: none;             
-    align-items: center;          
-    margin: 0;                    
-    padding: 0;                   
+    display: flex;                 /* Organiza botones en horizontal */
+    flex-direction: row;           /* En fila */
+    gap: 15px;                     /* Espacio de 15px entre botones */
+    list-style: none;              /* Sin viñetas */
+    align-items: center;           /* Centra verticalmente */
+    margin: 0;                     /* Sin márgenes */
+    padding: 0;                    /* Sin espacio interno */
 }
 
+/* CONTENEDOR PRINCIPAL */
 
+/* La caja grande que contiene toda la página */
 .container {
-    background-color: white;      
-    display: flex;                
-    flex-direction: column;       
-    min-height: 100vh;            
+    background-color: white;       /* Fondo blanco */
+    display: flex;                 /* Organiza elementos con flexbox */
+    flex-direction: column;        /* Elementos uno debajo del otro */
+    min-height: 100vh;             /* Altura mínima = toda la pantalla */
 }
 
+/* BARRA SUPERIOR (MENÚ) */
 
 .barra_superior {
-    font-size: 25px;              
-    position: fixed;              
-    z-index: 1000;                
+    font-size: 25px;               /* Tamaño de letra base */
+    position: fixed;               /* Fija en la parte superior */
+    z-index: 1000;                 /* Por encima de todo */
     color: black;
-    display: flex;                
-    flex-direction: row;          
-    align-items: center;          
-    width: 100%;                  
-    background-color: white;      
-    padding: 0;                   
-    justify-content: space-between;
-    height: 50px;                 
-    border-bottom: 2px solid grey;
+    display: flex;                 /* Organiza elementos con flexbox */
+    flex-direction: row;           /* Elementos en horizontal */
+    align-items: center;           /* Centra verticalmente */
+    width: 100%;                   /* Ancho completo */
+    background-color: white;       /* Fondo blanco */
+    padding: 0;                    /* Sin espacio interno */
+    justify-content: space-between;/* Separa los elementos */
+    height: 50px;                  /* Altura fija de 50px */
+    border-bottom: 2px solid grey; /* Borde gris abajo */
 }
 
+/* Contenedor de la zona derecha (configuración, notificaciones, perfil) */
 .footer_superior {
     display: flex;
     justify-content: space-between;
-    width: 8%;                    
-    padding: 0 20px;              
-    align-items: center;          
+    width: 8%;                     /* Ancho del 8% */
+    padding: 0 20px;               /* Espacio a los lados */
+    align-items: center;           /* Centra verticalmente */
     margin-right: 10px;
 }
 
+/* BOTONES */
 
+/* Estilo base de todos los botones del menú */
 .boton {
-    display: flex;                
-    align-items: center;          
-    margin: 10px;                 
-    cursor: pointer;              
-    background-color: white;      
-    border-radius: 10px;          
-    text-align: center;           
-    transition: all 0.3s ease;    
+    display: flex;                 /* Organiza con flexbox */
+    align-items: center;           /* Alinea icono y texto verticalmente */
+    margin: 10px;                  /* Espacio alrededor */
+    cursor: pointer;               /* Manita al pasar el mouse */
+    background-color: white;       /* Fondo blanco */
+    border-radius: 10px;           /* Esquinas redondeadas */
+    text-align: center;            /* Texto centrado */
+    transition: all 0.3s ease;     /* Animación suave */
 }
 
+/* Enlaces dentro de los botones */
 .boton a {
-    display: flex;                
-    align-items: center;          
-    gap: 8px;                     
-    padding: 10px 20px;           
-    color: black;                 
-    text-decoration: none;        
-    white-space: nowrap;          
-    transition: color 0.3s ease;  
-    border-radius: 10px;          
+    display: flex;                 /* Organiza con flexbox */
+    align-items: center;           /* Alinea icono y texto verticalmente */
+    gap: 8px;                      /* Espacio entre icono y texto */
+    padding: 10px 20px;            /* Espacio interno */
+    color: black;                  /* Texto negro */
+    text-decoration: none;         /* Sin subrayado */
+    white-space: nowrap;           /* No se parte en dos líneas */
+    transition: color 0.3s ease;   /* Animación del color */
+    border-radius: 10px;           /* Esquinas redondeadas */
 }
 
+/* Iconos dentro de los botones */
 .boton img {
-    width: 40px;                  
-    height: 30px;                 
-    flex-shrink: 0;               
+    width: 40px;                   /* Ancho fijo */
+    height: 30px;                  /* Alto fijo */
+    flex-shrink: 0;                /* No se reduce */
 }
 
+/* Cuando pasas el mouse por un botón */
 .boton--hover:hover {
-    transform: scale(0.90);       
-    border-color: orange;         
+    transform: scale(0.90);        /* Se reduce al 90% */
+    border-color: orange;          /* Borde naranja */
 }
