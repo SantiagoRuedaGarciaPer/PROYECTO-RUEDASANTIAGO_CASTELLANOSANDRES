@@ -1,0 +1,263 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL DEL DOCUMENTO
+   ===================================================== */
+
+/* Normalización de márgenes, rellenos y modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base del cuerpo del documento */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Definición de fuente personalizada */
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url(../assets/fonts/myriad-pro/MYRIADPRO-REGULAR.OTF);
+}
+
+/* Fuente principal aplicada al documento */
+:root {
+    font-family: 'Myriad Pro Regular';
+}
+
+/* =====================================================
+   BARRA SUPERIOR DE NAVEGACIÓN
+   ===================================================== */
+
+.barra_superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+/* =====================================================
+   MENÚ DE NAVEGACIÓN PRINCIPAL
+   ===================================================== */
+
+.tabla_contenido {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.tabla_contenido ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos base de los botones del menú */
+
+.boton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.boton a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.boton img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Efecto visual al pasar el cursor sobre los botones */
+.boton--hover:hover {
+    transform: scale(0.95);
+}
+
+/* =====================================================
+   ZONA DERECHA DE LA BARRA SUPERIOR
+   (Configuración, notificaciones y perfil)
+   ===================================================== */
+
+.footer_superior {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.footer_superior img {
+    cursor: pointer;
+}
+
+/* =====================================================
+   CONTENIDO PRINCIPAL DE LA PÁGINA
+   ===================================================== */
+
+.contenido-principal {
+    max-width: 900px;
+    margin: 100px auto 40px;
+    padding: 0 20px;
+}
+
+/* Título principal de la vista */
+.page-title {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* =====================================================
+   LISTADO DE TAREAS
+   ===================================================== */
+
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Contenedor individual de cada tarea */
+.task-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 1fr 1fr auto;
+    gap: 20px;
+    align-items: start;
+    transition: all 0.3s ease;
+}
+
+/* Efecto visual al pasar el cursor sobre una tarea */
+.task-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Estructura de cada columna de información */
+.task-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Etiquetas descriptivas de cada columna */
+.column-label {
+    display: block;
+    font-weight: 600;
+    color: #666;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   ESTILOS DEL TEXTO DE LAS TAREAS
+   ===================================================== */
+
+.task-name {
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+}
+
+.task-description {
+    color: #666;
+    font-size: 14px;
+}
+
+.task-priority {
+    color: #666;
+    font-size: 14px;
+}
+
+.task-date {
+    color: #666;
+    font-size: 14px;
+}
+
+/* =====================================================
+   BOTÓN PARA ELIMINAR TAREAS
+   ===================================================== */
+
+.delete-btn {
+    background-color: #ff6b35;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+/* Efecto visual al interactuar con el botón */
+.delete-btn:hover {
+    background-color: #ff5722;
+    transform: scale(1.1);
+}
+
+/* Ícono del botón eliminar */
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* =====================================================
+   DISEÑO RESPONSIVO
+   ===================================================== */
+
+@media (max-width: 768px) {
+    .task-item {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .delete-btn {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+    
+    .boton a {
+        font-size: 0;
+        padding: 10px;
+    }
+    
+    .boton img {
+        width: 25px;
+        height: 25px;
+    }
+}

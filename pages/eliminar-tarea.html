@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Tarea</title>
+    <link rel="stylesheet" href="../styles/styles-eliminar.css">
+</head>
+<body>
+
+    <!-- Barra superior de navegación principal -->
+    <header class="barra_superior">
+        
+        <!-- Menú de navegación con accesos a las distintas secciones -->
+        <nav class="tabla_contenido">
+            <ul>
+
+                <!-- Acceso a la creación de nuevas tareas -->
+                <li class="boton boton--hover">
+                    <a href="../pages/añadir-tarea.html">
+                        <img src="../assets/imgs/Group 3.svg" alt="Añadir tarea">
+                        Añadir
+                    </a>
+                </li>
+        
+                <!-- Opción para actualizar la página actual -->
+                <li class="boton boton--hover">
+                    <a href="../pages/eliminar-tarea.html">
+                        <img src="../assets/imgs/Icon open-reload.svg" alt="Refrescar página">
+                        Refrescar
+                    </a>
+                </li>
+    
+                <!-- Acceso a la sección de eliminación de tareas -->
+                <li class="boton boton--hover">
+                    <a href="../pages/eliminar-tarea.html">
+                        <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar tareas">
+                        Eliminar
+                    </a>
+                </li>
+                
+                <!-- Redirección a la página principal -->
+                <li class="boton boton--hover">
+                    <a href="#inicio">
+                        <img src="../assets/imgs/kario sin kairo.svg" alt="Inicio">
+                    </a>
+                </li>
+                
+                <!-- Opción para reportar errores o incidencias -->
+                <li class="boton boton--hover">
+                    <a href="pages/Reportes.html">
+                        <img src="../assets/imgs/Icon material-bug-report.svg" alt="Reportar incidencias">
+                        Reportar
+                    </a>
+                </li>
+        
+                <!-- Acceso a la sección de ayuda para el usuario -->
+                <li class="boton boton--hover">
+                    <a href="pages/Ayuda.html">
+                        <img src="../assets/imgs/icono_pregunta.svg" alt="Ayuda">
+                        Ayuda
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Zona derecha de la barra: configuración, notificaciones y perfil -->
+        <div class="footer_superior">
+            <img src="../assets/imgs/Icon ionic-ios-settings.svg" width="20" alt="Configuración">
+            <img src="../assets/imgs/Icon material-notifications-active.svg" width="20" alt="Notificaciones">
+            <img src="../assets/imgs/pp.png" width="40" alt="Perfil del usuario">
+        </div> 
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main class="contenido-principal">
+        <h1 class="page-title">Eliminar Tarea</h1>
+
+        <!-- Listado de tareas registradas en el sistema -->
+        <div class="tasks-list">
+
+            <!-- Registro de la primera tarea -->
+            <div class="task-item">
+                <div class="task-column">
+                    <label class="column-label">Nombre de la tarea</label>
+                    <span class="task-name">Modelado 3D</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Descripción</label>
+                    <span class="task-description">Interés por diseño tridimensional...</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Prioridad</label>
+                    <span class="task-priority">Baja</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Fecha de inicio</label>
+                    <span class="task-date">12/05/21</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Fecha de finalización</label>
+                    <span class="task-date">12/12/21</span>
+                </div>
+                <button class="delete-btn" aria-label="Eliminar tarea">
+                    <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar" class="delete-icon">
+                </button>
+            </div>
+
+            <!-- Registro de la segunda tarea -->
+            <div class="task-item">
+                <div class="task-column">
+                    <label class="column-label">Nombre de la tarea</label>
+                    <span class="task-name">Finca Galeón</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Descripción</label>
+                    <span class="task-description">Diseño de maqueta arquitectónica...</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Prioridad</label>
+                    <span class="task-priority">Baja</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Fecha de inicio</label>
+                    <span class="task-date">12/04/21</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Fecha de finalización</label>
+                    <span class="task-date">12/05/21</span>
+                </div>
+                <button class="delete-btn" aria-label="Eliminar tarea">
+                    <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar" class="delete-icon">
+                </button>
+            </div>
+
+            <!-- Registro de la tercera tarea -->
+            <div class="task-item">
+                <div class="task-column">
+                    <label class="column-label">Nombre de la tarea</label>
+                    <span class="task-name">Colegios Privados</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Descripción</label>
+                    <span class="task-description">Estrategia para llegar a instituciones privadas...</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Prioridad</label>
+                    <span class="task-priority">Baja</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Fecha de inicio</label>
+                    <span class="task-date">24/04/21</span>
+                </div>
+                <div class="task-column">
+                    <label class="column-label">Fecha de finalización</label>
+                    <span class="task-date">12/11/21</span>
+                </div>
+                <button class="delete-btn" aria-label="Eliminar tarea">
+                    <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar" class="delete-icon">
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
