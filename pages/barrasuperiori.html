@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Aquí se carga el archivo de estilos que hace que la barra se vea bonita -->
+    <link rel="stylesheet" href="../styles/styles-barra.css">
+</head>
+<body>
+    <!-- BARRA SUPERIOR (HEADER)
+         Esta es la barra que se ve arriba de la página -->
+    <header class="barra_superior">
+        
+        <!-- MENÚ DE NAVEGACIÓN
+             Aquí están todos los botones del menú -->
+        <nav class="tabla_contenido">
+            <ul>
+                <!-- Cada <li> es un botón del menú -->
+                
+                <!-- Botón AÑADIR -->
+                <li class="boton boton--hover">
+                    <a href="pages/Añadir.html">
+                        <img src="../assets/imgs/Group 3.svg" alt="Agregar">
+                        Añadir
+                    </a>
+                </li>
+        
+                <!-- Botón REFRESCAR -->
+                <li class="boton boton--hover">
+                    <a href="#inicio">
+                        <img src="../assets/imgs/Icon open-reload.svg" alt="Refrescar">
+                        Refrescar
+                    </a>
+                </li>
+    
+                <!-- Botón ELIMINAR -->
+                <li class="boton boton--hover">
+                    <a href="pages/Eliminar.html">
+                        <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar">
+                        Eliminar
+                    </a>
+                </li>
+                
+                <!-- Botón de INICIO (solo tiene logo, sin texto) -->
+                <li class="boton boton--hover">
+                    <a href="#inicio">
+                        <img src="../assets/imgs/kario sin kairo.svg" alt="Inicio">
+                    </a>
+                </li>
+                
+                <!-- Botón REPORTAR -->
+                <li class="boton boton--hover">
+                    <a href="pages/Reportes.html">
+                        <img src="../assets/imgs/Icon material-bug-report.svg" alt="Reportar">
+                        Reportar
+                    </a>
+                </li>
+        
+                <!-- Botón AYUDA -->
+                <li class="boton boton--hover">
+                    <a href="pages/Ayuda.html">
+                        <img src="../assets/imgs/icono_pregunta.svg" alt="Ayuda">
+                        Ayuda
+                    </a>
+                </li>
+        
+            </ul>
+        </nav>
+        
+        <!-- ZONA DERECHA DE LA BARRA
+             Iconos de configuración, notificaciones y perfil -->
+        <div class="footer_superior">
+            <!-- Icono de CONFIGURACIÓN -->
+            <li class="boton boton--hover">
+                <img src="../assets/imgs/Icon ionic-ios-settings.svg" width="20" alt="Buscar">
+            </li>
+            
+            <!-- Icono de NOTIFICACIONES -->
+            <li class="boton boton--hover">
+                <img src="../assets/imgs/Icon material-notifications-active.svg" width="20" alt="Notificaciones">
+            </li>
+            
+            <!-- Foto de PERFIL del usuario -->
+            <img src="../assets/imgs/pp.png" width="40" alt="Perfil Usuario">
+        </div> 
+    </header>
+</body>
+</html>

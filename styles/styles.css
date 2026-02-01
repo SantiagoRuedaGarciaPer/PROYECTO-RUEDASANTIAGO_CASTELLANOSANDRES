@@ -75,8 +75,8 @@ body{
 /* Login */
 .login_container{
     visibility: hidden;
-    width: 0;
-    height: 0;
+    width: 50vh;
+    height: min-content;
     animation: showDiv 1s 6s;
     
     animation-fill-mode: forwards;

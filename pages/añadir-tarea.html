@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Tarea</title>
+    <link rel="stylesheet" href="../styles/styles-añadir.css">
+</head>
+<body>
+
+    <!-- Barra superior de navegación principal -->
+    <header class="barra_superior">
+        
+        <!-- Menú principal con accesos a las funcionalidades del sistema -->
+        <nav class="tabla_contenido">
+            <ul>
+
+                <!-- Acceso a la página de creación de nuevas tareas -->
+                <li class="boton boton--hover">
+                    <a href="../pages/añadir-tarea.html">
+                        <img src="../assets/imgs/Group 3.svg" alt="Añadir tarea">
+                        Añadir
+                    </a>
+                </li>
+        
+                <!-- Opción para recargar el contenido de la página -->
+                <li class="boton boton--hover">
+                    <a href="../pages/añadir-tarea.html">
+                        <img src="../assets/imgs/Icon open-reload.svg" alt="Refrescar página">
+                        Refrescar
+                    </a>
+                </li>
+    
+                <!-- Acceso a la sección de eliminación de tareas -->
+                <li class="boton boton--hover">
+                    <a href="../pages/eliminar-tarea.html">
+                        <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar tareas">
+                        Eliminar
+                    </a>
+                </li>
+                
+                <!-- Redirección a la página de inicio -->
+                <li class="boton boton--hover">
+                    <a href="#inicio">
+                        <img src="../assets/imgs/kario sin kairo.svg" alt="Inicio">
+                    </a>
+                </li>
+                
+                <!-- Opción para reportar errores o incidencias -->
+                <li class="boton boton--hover">
+                    <a href="pages/Reportes.html">
+                        <img src="../assets/imgs/Icon material-bug-report.svg" alt="Reportar incidencias">
+                        Reportar
+                    </a>
+                </li>
+        
+                <!-- Acceso a la sección de ayuda para el usuario -->
+                <li class="boton boton--hover">
+                    <a href="pages/Ayuda.html">
+                        <img src="../assets/imgs/icono_pregunta.svg" alt="Ayuda">
+                        Ayuda
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Iconos de configuración, notificaciones y perfil del usuario -->
+        <div class="footer_superior">
+            <img src="../assets/imgs/Icon ionic-ios-settings.svg" width="20" alt="Configuración">
+            <img src="../assets/imgs/Icon material-notifications-active.svg" width="20" alt="Notificaciones">
+            <img src="../assets/imgs/pp.png" width="40" alt="Perfil del usuario">
+        </div> 
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main class="contenido-principal">
+        <h1 class="page-title">Añadir Tarea</h1>
+
+        <!-- Formulario para el registro de una nueva tarea -->
+        <div class="form-container">
+            
+            <!-- Campo para ingresar el nombre de la tarea -->
+            <div class="form-group">
+                <label for="nombre-tarea">Nombre de la tarea</label>
+                <input type="text" id="nombre-tarea" name="nombre-tarea" placeholder="Ejemplo: Modelado 3D">
+            </div>
+
+            <!-- Selección de la categoría de la tarea -->
+            <div class="form-group">
+                <label for="categoria">Categoría de la tarea</label>
+                <select id="categoria" name="categoria">
+                    <option value="">Seleccione una categoría</option>
+                    <option value="desarrollo">Desarrollo</option>
+                    <option value="diseño">Diseño</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="administracion">Administración</option>
+                    <option value="ventas">Ventas</option>
+                    <option value="soporte">Soporte</option>
+                </select>
+            </div>
+
+            <!-- Descripción detallada de la tarea -->
+            <div class="form-group">
+                <label for="descripcion">Descripción de la tarea</label>
+                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Ingrese una descripción detallada de la tarea"></textarea>
+            </div>
+
+            <!-- Fechas de inicio y finalización -->
+            <div class="form-row">
+
+                <!-- Fecha de inicio de la tarea -->
+                <div class="form-group">
+                    <label for="fecha-inicio">Fecha de inicio</label>
+                    <input type="date" id="fecha-inicio" name="fecha-inicio">
+                </div>
+
+                <!-- Fecha estimada de finalización -->
+                <div class="form-group">
+                    <label for="fecha-fin">Fecha de finalización</label>
+                    <input type="date" id="fecha-fin" name="fecha-fin">
+                </div>
+            </div>
+
+            <!-- Área responsable de la tarea -->
+            <div class="form-group">
+                <label for="area">Área responsable</label>
+                <select id="area" name="area">
+                    <option value="">Seleccione un área</option>
+                    <option value="tecnologia">Tecnología</option>
+                    <option value="recursos-humanos">Recursos Humanos</option>
+                    <option value="finanzas">Finanzas</option>
+                    <option value="operaciones">Operaciones</option>
+                    <option value="comercial">Comercial</option>
+                    <option value="produccion">Producción</option>
+                </select>
+            </div>
+
+            <!-- Acciones del formulario -->
+            <div class="form-actions">
+                <button type="button" class="btn btn-cancelar">Cancelar</button>
+                <button type="submit" class="btn btn-guardar">Guardar tarea</button>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
