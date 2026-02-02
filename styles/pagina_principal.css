@@ -163,7 +163,7 @@ body{
 .row{
     flex: 1;
     border: 1px solid black;
-    border-radius: 50px;
+    border-radius: 25px;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     align-items: center;
@@ -171,6 +171,7 @@ body{
     padding: auto 12px 20px;
 }
 .row:hover{
+    border: 1px solid #f5f5f5;
     box-shadow: 0px 0px 5px 5px #ddd;
     cursor: pointer;
 }
@@ -197,7 +198,7 @@ span{
     margin: 10px;
 }
 .article_container{
-    padding: 30px 0px;
+    padding: 45px 0px;
     text-align: center;
 }
 article{
