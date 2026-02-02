@@ -107,7 +107,19 @@ body{
     flex-direction: column;
     gap: 5px;
 }
+.rowcontainer{
+    display: flex;
+}
+.rowtitle{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+    margin: 12px;
+    padding: 12px 20px;
+}
 .row{
+    flex: 1;
     border: 1px solid black;
     border-radius: 50px;
     display: grid;
@@ -116,6 +128,11 @@ body{
     margin: 12px;
     padding: 12px 20px;
 }
+.row:hover{
+    box-shadow: 0px 0px 5px 5px #ddd;
+    cursor: pointer;
+}
+
 .completition{
     width: 40px;
     height: 40px;
@@ -153,4 +170,14 @@ article{
     border-radius: 30px;
     height: 50px;
     width: 250px;
+}
+button:hover{
+    background-color: #b85314;
+    height: 60px;
+    width: 260px;
+    box-shadow: 0px 0px 5px 5px #ddd;
+}
+.mover:hover{
+    cursor: pointer;
+
 }
