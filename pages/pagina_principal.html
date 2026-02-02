@@ -12,59 +12,71 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/pagina_principal.css">
-    <link rel="stylesheet" href="../styles/styles-barra.css">
     <title>Kario Media</title>
 </head>
 <body>
-    <header class="barra_superior">
+     <!-- Barra superior de navegación principal -->
+     <header class="barra_superior">
+        
+        <!-- Menú de navegación con accesos a las distintas secciones -->
         <nav class="tabla_contenido">
             <ul>
+
+                <!-- Acceso a la creación de nuevas tareas -->
                 <li class="boton boton--hover">
                     <a href="./añadir-tarea.html">
-                        <img src="../assets/imgs/Group 3.svg" alt="Agregar">
+                        <img src="../assets/imgs/Group 3.svg" alt="Añadir tarea">
                         Añadir
                     </a>
                 </li>
+        
+                <!-- Opción para actualizar la página actual -->
                 <li class="boton boton--hover">
-                    <a href="#inicio">
-                        <img src="../assets/imgs/Icon open-reload.svg" alt="Refrescar">
+                    <a href="./eliminar-tarea.html">
+                        <img src="../assets/imgs/Icon open-reload.svg" alt="Refrescar página">
                         Refrescar
                     </a>
                 </li>
+    
+                <!-- Acceso a la sección de eliminación de tareas -->
                 <li class="boton boton--hover">
                     <a href="./eliminar-tarea.html">
-                        <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar">
+                        <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar tareas">
                         Eliminar
                     </a>
                 </li>
+                
+                <!-- Redirección a la página principal -->
                 <li class="boton boton--hover">
-                    <a href="#inicio">
+                    <a href="./pagina_principal.html">
                         <img src="../assets/imgs/kario sin kairo.svg" alt="Inicio">
                     </a>
                 </li>
+                
+                <!-- Opción para reportar errores o incidencias -->
                 <li class="boton boton--hover">
                     <a href="#">
-                        <img src="../assets/imgs/Icon material-bug-report.svg" alt="Reportar">
+                        <img src="../assets/imgs/Icon material-bug-report.svg" alt="Reportar incidencias">
                         Reportar
                     </a>
                 </li>
+        
+                <!-- Acceso a la sección de ayuda para el usuario -->
                 <li class="boton boton--hover">
                     <a href="#">
-                        <img src="../assets/imgs/icono_pregunta.jpeg" alt="Ayuda">
+                        <img src="../assets/imgs/icono_pregunta.svg" alt="Ayuda">
                         Ayuda
                     </a>
                 </li>
             </ul>
         </nav>
+        
+        <!-- Zona derecha de la barra: configuración, notificaciones y perfil -->
         <div class="footer_superior">
-            <li class="boton boton--hover">
-                <img src="../assets/imgs/Icon ionic-ios-settings.svg" width="20" alt="Buscar">
-            </li>
-            <li class="boton boton--hover">
-                <img src="../assets/imgs/Icon material-notifications-active.svg" width="20" alt="Notificaciones">
-            </li>
-            <img src="../assets/imgs/pp.png" width="40" alt="Perfil Usuario">
-        </div>
+            <img src="../assets/imgs/Icon ionic-ios-settings.svg" width="20" alt="Configuración">
+            <img src="../assets/imgs/Icon material-notifications-active.svg" width="20" alt="Notificaciones">
+            <img src="../assets/imgs/pp.png" width="40" alt="Perfil del usuario">
+        </div> 
     </header>
 
     <div class="article_container">
