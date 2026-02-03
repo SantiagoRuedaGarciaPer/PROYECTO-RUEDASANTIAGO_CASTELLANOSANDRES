@@ -1,0 +1,307 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL DEL DOCUMENTO
+   ===================================================== */
+
+/* Normalización de márgenes, rellenos y modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos base aplicados al cuerpo de la página */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5; /* Fondo gris claro */
+    color: #333;              /* Color de texto principal */
+}
+
+/* Carga de la fuente tipográfica personalizada */
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url(../assets/fonts/myriad-pro/MYRIADPRO-REGULAR.OTF);
+}
+
+/* Aplicación de la fuente principal al documento */
+:root {
+    font-family: 'Myriad Pro Regular';
+}
+
+/* =====================================================
+   BARRA SUPERIOR DE NAVEGACIÓN
+   ===================================================== */
+
+/* Barra fija que permanece visible durante el desplazamiento */
+.barra_superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+/* =====================================================
+   MENÚ PRINCIPAL DE NAVEGACIÓN
+   ===================================================== */
+
+/* Contenedor del menú de opciones */
+.tabla_contenido {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Lista de botones del menú */
+.tabla_contenido ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos base de cada botón del menú */
+.boton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Enlaces internos de los botones */
+.boton a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Iconos utilizados en los botones */
+.boton img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Efecto visual al interactuar con el botón */
+.boton--hover:hover {
+    transform: scale(0.95);
+}
+
+/* =====================================================
+   ZONA DERECHA DE LA BARRA SUPERIOR
+   (Configuración, notificaciones y perfil)
+   ===================================================== */
+
+.footer_superior {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+/* Indica que los iconos son interactivos */
+.footer_superior img {
+    cursor: pointer;
+}
+
+/* =====================================================
+   CONTENIDO PRINCIPAL DE LA PÁGINA
+   ===================================================== */
+
+.contenido-principal {
+    max-width: 700px;
+    margin: 100px auto 40px;
+    padding: 0 20px;
+}
+
+/* Título principal de la vista */
+.page-title {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* =====================================================
+   FORMULARIO DE REGISTRO DE TAREAS
+   ===================================================== */
+
+/* Contenedor principal del formulario */
+.form-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Agrupación de cada campo del formulario */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Etiquetas descriptivas de los campos */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+}
+
+/* Campos de entrada, selección y texto */
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+/* Estilo visual al enfocar un campo del formulario */
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #ff6b35;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+/* Área de texto para descripciones extensas */
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Campos desplegables */
+.form-group select {
+    cursor: pointer;
+}
+
+/* Distribución horizontal de campos relacionados */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* =====================================================
+   ACCIONES DEL FORMULARIO
+   ===================================================== */
+
+/* Contenedor de los botones de acción */
+.form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Estilo base de los botones */
+.btn {
+    
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botón para cancelar la acción */
+.btn-cancelar {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/* Interacción visual del botón cancelar */
+.btn-cancelar:hover {
+    background-color: #d0d0d0;
+    transform: translateY(-2px);
+}
+
+/* Botón para guardar la tarea */
+.btn-guardar {
+    background-color: #ff6b35;
+    color: white;
+    width: max-content;
+}
+
+/* Interacción visual del botón guardar */
+.btn-guardar:hover {
+    background-color: #ff5722;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+/* Estado activo de los botones */
+.btn:active {
+    transform: translateY(0);
+}
+
+/* =====================================================
+   DISEÑO RESPONSIVO PARA DISPOSITIVOS MÓVILES
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Ajuste de espaciado del formulario */
+    .form-container {
+        padding: 25px;
+    }
+    
+    /* Reorganización vertical de los campos de fecha */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Disposición vertical de los botones */
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    /* Botones a ancho completo */
+    .btn {
+        width: 100%;
+    }
+    
+    /* Ocultamiento del texto del menú en pantallas pequeñas */
+    .boton a {
+        font-size: 0;
+        padding: 10px;
+    }
+    
+    /* Ajuste del tamaño de los iconos del menú */
+    .boton img {
+        width: 25px;
+        height: 25px;
+    }
+}

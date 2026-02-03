@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir Tarea</title>
-    <link rel="stylesheet" href="../styles/styles-añadir.css">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/ayuda.css">
+    <title>Ayuda</title>
 </head>
 <body>
-
-    <!-- Barra superior de navegación principal -->
     <header class="barra_superior">
         
-        <!-- Menú principal con accesos a las funcionalidades del sistema -->
+        <!-- Menú de navegación con accesos a las distintas secciones -->
         <nav class="tabla_contenido">
             <ul>
 
-                <!-- Acceso a la página de creación de nuevas tareas -->
+                <!-- Acceso a la creación de nuevas tareas -->
                 <li class="boton boton--hover">
-                    <a href="../pages/añadir-tarea.html">
+                    <a href="./añadir-tarea.html">
                         <img src="../assets/imgs/Group 3.svg" alt="Añadir tarea">
                         Añadir
                     </a>
                 </li>
         
-                <!-- Opción para recargar el contenido de la página -->
+                <!-- Opción para actualizar la página actual -->
                 <li class="boton boton--hover">
-                    <a href="./añadir-tarea.html">
+                    <a href="./ayuda.html">
                         <img src="../assets/imgs/Icon open-reload.svg" alt="Refrescar página">
                         Refrescar
                     </a>
@@ -44,7 +45,7 @@
                     </a>
                 </li>
                 
-                <!-- Redirección a la página de inicio -->
+                <!-- Redirección a la página principal -->
                 <li class="boton boton--hover">
                     <a href="./pagina_principal.html">
                         <img src="../assets/imgs/kario sin kairo.svg" alt="Inicio">
@@ -69,76 +70,42 @@
             </ul>
         </nav>
         
-        <!-- Iconos de configuración, notificaciones y perfil del usuario -->
+        <!-- Zona derecha de la barra: configuración, notificaciones y perfil -->
         <div class="footer_superior">
             <img src="../assets/imgs/Icon ionic-ios-settings.svg" width="20" alt="Configuración">
             <img src="../assets/imgs/Icon material-notifications-active.svg" width="20" alt="Notificaciones">
             <img src="../assets/imgs/pp.png" width="40" alt="Perfil del usuario">
         </div> 
     </header>
-
-    <!-- Contenido principal de la página -->
     <main class="contenido-principal">
-        <h1 class="page-title">Añadir Tarea</h1>
+        <h1 class="page-title">Ayuda</h1>
 
         <!-- Formulario para el registro de una nueva tarea -->
         <div class="form-container">
-            
-            <!-- Campo para ingresar el nombre de la tarea -->
-            <div class="form-group">
-                <label for="nombre-tarea">Nombre de la tarea</label>
-                <input type="text" id="nombre-tarea" name="nombre-tarea" placeholder="Ejemplo: Modelado 3D">
-            </div>
-
-            <!-- Selección de la categoría de la tarea -->
-            <div class="form-group">
-                <label for="categoria">Categoría de la tarea</label>
-                <select id="categoria" name="categoria">
-                    <option value="">Seleccione una categoría</option>
-                    <option value="desarrollo">Desarrollo</option>
-                    <option value="diseño">Diseño</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="administracion">Administración</option>
-                    <option value="ventas">Ventas</option>
-                    <option value="soporte">Soporte</option>
-                </select>
-            </div>
-
+       
             <!-- Descripción detallada de la tarea -->
             <div class="form-group">
-                <label for="descripcion">Descripción de la tarea</label>
-                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Ingrese una descripción detallada de la tarea"></textarea>
+                <label for="descripcion">Escriba aqui el problema que presento</label>
+                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Ingrese una descripción detallada de su problema"></textarea>
             </div>
 
             <!-- Fechas de inicio y finalización -->
             <div class="form-row">
+                <div class="form-group">
+                    <label for="correo">Ingrese su correo electronico</label>
+                    <input type="text" id="correo" name="correo">
+                </div>
 
                 <!-- Fecha de inicio de la tarea -->
                 <div class="form-group">
-                    <label for="fecha-inicio">Fecha de inicio</label>
+                    <label for="fecha-inicio">Fecha de cuando evidencio el problema</label>
                     <input type="date" id="fecha-inicio" name="fecha-inicio">
                 </div>
 
-                <!-- Fecha estimada de finalización -->
-                <div class="form-group">
-                    <label for="fecha-fin">Fecha de finalización</label>
-                    <input type="date" id="fecha-fin" name="fecha-fin">
-                </div>
-            </div>
+               
 
             <!-- Área responsable de la tarea -->
-            <div class="form-group">
-                <label for="area">Área responsable</label>
-                <select id="area" name="area">
-                    <option value="">Seleccione un área</option>
-                    <option value="tecnologia">Tecnología</option>
-                    <option value="recursos-humanos">Recursos Humanos</option>
-                    <option value="finanzas">Finanzas</option>
-                    <option value="operaciones">Operaciones</option>
-                    <option value="comercial">Comercial</option>
-                    <option value="produccion">Producción</option>
-                </select>
-            </div>
+            
 
             <!-- Acciones del formulario -->
             <div class="form-actions">
@@ -152,6 +119,5 @@
 
         </div>
     </main>
-
 </body>
 </html>
