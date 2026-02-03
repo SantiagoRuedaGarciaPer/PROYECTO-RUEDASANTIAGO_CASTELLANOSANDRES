@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Iconos de la página en el navegador -->
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Incidencia - Kario Media</title>
+
+    <!-- Estilos de la página de reportar -->
+    <link rel="stylesheet" href="../styles/style-reportar.css">
+</head>
+<body>
+
+    <!-- =========================================
+         BARRA SUPERIOR DE NAVEGACIÓN
+         Está presente en todas las páginas del proyecto.
+         Permite moverse entre las secciones principales.
+         ========================================= -->
+    <header class="barra_superior">
+
+        <!-- Menú principal con los enlaces a cada sección -->
+        <nav class="tabla_contenido">
+            <ul>
+
+                <!-- Botón para ir a crear una nueva tarea -->
+                <li class="boton boton--hover">
+                    <a href="./añadir-tarea.html">
+                        <img src="../assets/imgs/Group 3.svg" alt="Añadir tarea">
+                        Añadir
+                    </a>
+                </li>
+
+                <!-- Botón para refrescar y volver a esta misma página -->
+                <li class="boton boton--hover">
+                    <a href="./reportar.html">
+                        <img src="../assets/imgs/Icon open-reload.svg" alt="Refrescar página">
+                        Refrescar
+                    </a>
+                </li>
+
+                <!-- Botón para ir a eliminar tareas -->
+                <li class="boton boton--hover">
+                    <a href="./eliminar-tarea.html">
+                        <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar tareas">
+                        Eliminar
+                    </a>
+                </li>
+
+                <!-- Logo de Kario que lleva a la página principal -->
+                <li class="boton boton--hover">
+                    <a href="./pagina_principal.html">
+                        <img src="../assets/imgs/kario sin kairo.svg" alt="Inicio">
+                    </a>
+                </li>
+
+                <!-- Botón de Reportar (esta misma página) -->
+                <li class="boton boton--hover">
+                    <a href="./reportar.html">
+                        <img src="../assets/imgs/Icon material-bug-report.svg" alt="Reportar incidencias">
+                        Reportar
+                    </a>
+                </li>
+
+                <!-- Botón de Ayuda -->
+                <li class="boton boton--hover">
+                    <a href="#">
+                        <img src="../assets/imgs/icono_pregunta.svg" alt="Ayuda">
+                        Ayuda
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Zona derecha: configuración, notificaciones y foto de perfil -->
+        <div class="footer_superior">
+            <img src="../assets/imgs/Icon ionic-ios-settings.svg" width="20" alt="Configuración">
+            <img src="../assets/imgs/Icon material-notifications-active.svg" width="20" alt="Notificaciones">
+            <img src="../assets/imgs/pp.png" width="40" alt="Perfil del usuario">
+        </div>
+    </header>
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL DE LA PÁGINA
+         Aquí va todo el formulario de reporte.
+         ========================================= -->
+    <main class="contenido-principal">
+
+        <!-- Título y texto introductorio -->
+        <div class="encabezado-pagina">
+            <!-- Icono de reporte junto al título -->
+            <img src="../assets/imgs/Icon material-bug-report.svg" alt="" class="icono-titulo">
+            <h1 class="page-title">Reportar Incidencia</h1>
+            <!-- Texto que le explica al usuario para qué sirve esta página -->
+            <p class="descripcion-pagina">
+                Si encontraste algo que no funciona bien o que no es como debería ser,
+                cuéntanos aquí y lo revisaremos lo antes posible.
+            </p>
+        </div>
+
+        <!-- =========================================
+             FORMULARIO DE REPORTE
+             Cada campo tiene su etiqueta arriba para que
+             sea claro qué debe escribir el usuario.
+             ========================================= -->
+        <form class="formulario-reporte">
+
+            <!-- NOMBRE DEL USUARIO -->
+            <!-- El usuario escribe su nombre completo para identificarse -->
+            <div class="campo-formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+            </div>
+
+            <!-- CORREO ELECTRÓNICO -->
+            <!-- Se usa para poder comunicarse después con la persona que reportó -->
+            <div class="campo-formulario">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="Ej: juan@correo.com" required>
+            </div>
+
+            <!-- TIPO DE INCIDENCIA -->
+            <!-- Una lista desplegable donde el usuario elige qué tipo de problema tiene -->
+            <div class="campo-formulario">
+                <label for="tipo">Tipo de incidencia</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="" disabled selected>Selecciona un tipo</option>
+                    <option value="error-visual">Error visual en la página</option>
+                    <option value="no-funciona">Algo no funciona</option>
+                    <option value="datos-incorrectos">Datos incorrectos</option>
+                    <option value="problema-velocidad">Problema de velocidad</option>
+                    <option value="otra">Otra</option>
+                </select>
+            </div>
+
+            <!-- NIVEL DE URGENCIA -->
+            <!-- El usuario indica qué tan importante es este problema -->
+            <div class="campo-formulario">
+                <label for="urgencia">Nivel de urgencia</label>
+                <select id="urgencia" name="urgencia" required>
+                    <option value="" disabled selected>Selecciona la urgencia</option>
+                    <option value="baja">Baja — No afecta mucho el trabajo</option>
+                    <option value="media">Media — Dificulta un poco las tareas</option>
+                    <option value="alta">Alta — Bloquea el trabajo completamente</option>
+                </select>
+            </div>
+
+            <!-- DESCRIPCIÓN DEL PROBLEMA -->
+            <!-- Un área grande donde el usuario puede explicar con detalle qué pasó -->
+            <div class="campo-formulario">
+                <label for="descripcion">Descripción del problema</label>
+                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Cuéntanos con detalle qué pasó y en qué parte del sistema..." required></textarea>
+            </div>
+
+            <!-- PASOS PARA REPRODUCIR -->
+            <!-- Le pide al usuario que explique paso a paso cómo llegar al error -->
+            <div class="campo-formulario">
+                <label for="pasos">Pasos para llegar al problema</label>
+                <textarea id="pasos" name="pasos" rows="3" placeholder="Ej: 1. Fui a la página principal. 2. Hice clic en Añadir. 3. Apareces un error..."></textarea>
+            </div>
+
+            <!-- BOTONES DE ACCIÓN -->
+            <!-- Dos opciones: enviar el reporte o limpiar todo el formulario -->
+            <div class="botones-formulario">
+                <!-- Este botón envía el formulario (type=submit) -->
+                <button type="submit" class="btn-enviar">Enviar Reporte</button>
+                <!-- Este botón limpia todos los campos sin enviar (type=reset) -->
+                <button type="reset" class="btn-limpiar">Limpiar</button>
+            </div>
+        </form>
+    </main>
+
+</body>
+</html>

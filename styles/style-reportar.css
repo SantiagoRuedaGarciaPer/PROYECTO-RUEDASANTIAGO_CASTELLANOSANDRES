@@ -1,0 +1,317 @@
+
+Copiar
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   Esto se aplica a toda la página: márgenes, fuente, fondo.
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Que el padding no haga las cajas más grandes */
+}
+
+body {
+    background-color: #f5f5f5; /* Gris claro de fondo, igual que el resto del proyecto */
+    color: #333;               /* Color del texto general */
+}
+
+/* Fuente personalizada del proyecto */
+@font-face {
+    font-family: 'Myriad Pro Regular';
+    src: url(../assets/fonts/myriad-pro/MYRIADPRO-REGULAR.OTF);
+}
+
+:root {
+    font-family: 'Myriad Pro Regular';
+}
+
+/* =====================================================
+   BARRA SUPERIOR DE NAVEGACIÓN
+   Se repite en todas las páginas del proyecto.
+   Está fija arriba para que siempre esté visible.
+   ===================================================== */
+
+.barra_superior {
+    position: fixed;              /* Fija en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000;                /* Se pone por encima de todo */
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 2px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+}
+
+/* Centro de la barra: el menú de navegación */
+.tabla_contenido {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Lista horizontal de botones del menú */
+.tabla_contenido ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cada botón del menú */
+.boton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* El enlace dentro de cada botón */
+.boton a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* Iconos dentro de los botones del menú */
+.boton img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Cuando el mouse pasa por un botón, se reduce un poco */
+.boton--hover:hover {
+    transform: scale(0.95);
+}
+
+/* Zona derecha de la barra: iconos de config, notificaciones y perfil */
+.footer_superior {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.footer_superior img {
+    cursor: pointer;
+}
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+   Es la caja grande que contiene el título y el formulario.
+   Tiene un margen arriba para que no se tape con la barra.
+   ===================================================== */
+
+.contenido-principal {
+    max-width: 700px;            /* No se estira demasiado en pantallas grandes */
+    margin: 80px auto 60px;      /* 80px arriba para separar de la barra fija */
+    padding: 0 20px;
+}
+
+/* =====================================================
+   ENCABEZADO DE LA PÁGINA
+   El título, el icono y el texto explicativo.
+   ===================================================== */
+
+.encabezado-pagina {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Icono grande que aparece encima del título */
+.icono-titulo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Título principal de la página */
+.page-title {
+    font-size: 30px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Texto pequeño debajo del título que explica para qué sirve */
+.descripcion-pagina {
+    color: #666;
+    font-size: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;            /* Espaciado entre líneas para que sea legible */
+}
+
+/* =====================================================
+   FORMULARIO DE REPORTE
+   La caja blanca donde están todos los campos.
+   ===================================================== */
+
+.formulario-reporte {
+    background-color: white;
+    border-radius: 20px;         /* Esquinas redondeadas como en el proyecto */
+    padding: 40px 35px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra suave para que sobresalga un poco */
+    display: flex;
+    flex-direction: column;      /* Los campos van uno debajo del otro */
+    gap: 25px;                   /* Espacio entre cada campo */
+}
+
+/* =====================================================
+   CADA CAMPO DEL FORMULARIO
+   Cada uno tiene una etiqueta (label) arriba y un
+   campo de entrada (input, select o textarea) abajo.
+   ===================================================== */
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;                    /* Espacio pequeño entre la etiqueta y el campo */
+}
+
+/* Las etiquetas que dicen "Nombre completo", "Correo", etc. */
+.campo-formulario label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;   /* Se ponen en mayúsculas para resaltarlas */
+    letter-spacing: 0.5px;
+}
+
+/* Los campos de texto, las listas desplegables y las áreas de texto */
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+    padding: 12px 16px;
+    border: 1px solid #ddd;      /* Borde gris ligero */
+    border-radius: 12px;         /* Esquinas redondeadas */
+    font-size: 15px;
+    color: #333;
+    background-color: #fafafa;   /* Fondo muy claro para diferenciarlo del blanco */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;        /* Usa la misma fuente que el resto */
+    appearance: auto;            /* Para que el select se vea bien */
+}
+
+/* Cuando el usuario hace clic en un campo, aparece un borde naranja */
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    outline: none;               /* Se quita el borde por defecto del navegador */
+    border-color: #ff721b;       /* Naranja del proyecto */
+    box-shadow: 0 0 0 3px rgba(255, 114, 27, 0.2); /* Brillo naranja suave alrededor */
+    background-color: white;
+}
+
+/* El texto gris que aparece antes de que el usuario escriba */
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder {
+    color: #aaa;
+}
+
+/* Áreas de texto grandes (descripción y pasos) */
+.campo-formulario textarea {
+    resize: vertical;            /* Solo se puede estirar hacia abajo, no hacia los lados */
+    min-height: 100px;
+}
+
+/* =====================================================
+   BOTONES DE ENVIAR Y LIMPIAR
+   Están al final del formulario, lado a lado.
+   ===================================================== */
+
+.botones-formulario {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;            /* Un poco de espacio extra arriba de los botones */
+}
+
+/* Botón principal: "Enviar Reporte" */
+.btn-enviar {
+    background-color: #ff721b;   /* Naranja del proyecto */
+    color: white;
+    border: none;
+    border-radius: 30px;         /* Bordes bien redondeados como los botones del proyecto */
+    padding: 14px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+    min-width: 200px;
+}
+
+/* Cuando el mouse pasa por el botón de enviar */
+.btn-enviar:hover {
+    background-color: #b85314;   /* Se oscurece un poco, igual que en otros botones del proyecto */
+    box-shadow: 0 0 8px rgba(255, 114, 27, 0.4);
+    transform: scale(1.03);      /* Se hace ligeramente más grande */
+}
+
+/* Botón secundario: "Limpiar" */
+.btn-limpiar {
+    background-color: white;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 14px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    font-family: inherit;
+    min-width: 140px;
+}
+
+/* Cuando el mouse pasa por el botón de limpiar */
+.btn-limpiar:hover {
+    border-color: #ff721b;       /* Borde naranja para que coincida con el tema */
+    color: #ff721b;
+    transform: scale(1.03);
+}
+
+/* =====================================================
+   DISEÑO RESPONSIVO (pantallas pequeñas)
+   Cuando la pantalla es pequeña, los botones del menú
+   solo muestran los iconos y el formulario se ajusta.
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* En móvil, los botones del menú solo muestran el icono */
+    .boton a {
+        font-size: 0;
+        padding: 10px;
+    }
+
+    .boton img {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* El formulario se ajusta al ancho de la pantalla */
+    .formulario-reporte {
+        padding: 25px 20px;
+    }
+
+    /* Los botones se ponen uno debajo del otro */
+    .botones-formulario {
+        flex-direction: column;
+        align-items: center;
+    }
+}
