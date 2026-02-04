@@ -227,3 +227,55 @@ button:hover{
     cursor: pointer;
 
 }
+
+@media(max-width: 768px){
+    .rowcontainer{
+        padding-left: 50px;
+    }
+    .row{
+        flex: 1;
+        border: 1px solid black;
+        border-radius: 25px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        align-items:start;
+        text-align: start;
+        width: 80%;
+    }
+    .row span{
+        margin:10px;
+    }
+    .rowtitle{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: start;
+        margin: 12px 0px;
+        padding: 5px;
+        position: fixed;
+        left: 0px;
+        width: 24%;
+        overflow: hidden;
+        background-color: #ff721b;
+        color: white;
+        border-radius: 0px 15px 15px 0px;
+
+    }
+    .Descripcion{
+        text-overflow: clip;
+    }
+    .rowtitle strong{
+        margin: 18px 5px ;
+    }
+     /* Ocultamiento del texto del menú en pantallas pequeñas */
+     .boton a {
+        font-size: 0;
+        padding: 10px;
+    }
+    
+    /* Ajuste del tamaño de los iconos del menú */
+    .boton img {
+        width: 25px;
+        height: 25px;
+    }
+}
