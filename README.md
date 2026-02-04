@@ -76,3 +76,7 @@ Para desarrollar la división del proyecto FrontEnd se deben tener los siguiente
 - La página web deberá ser desarrollada con código nativo HTML/CSS, sin la posibilidad de usar librerías externas.
 - La página web deberá ser subido en un repositorio de GitHub privado compartido con el Trainer con el nombre “PROYECTO-APELLIDO1NOMBRE1_APELLIDO2NOMBRE2”.
 - Se deben desarrollar las propuestas de los módulos faltantes **previo al desarrollo del código HTML/CSS**, el cual se puede realizar en Adobe XD o Figma.
+
+## **Link Figma**
+
+[Enlace](https://www.figma.com/design/qG0o1SVyLQFAI0eHPHxMDw/Untitled?node-id=0-1&p=f&t=HX4SpPhuZ5qEYRoR-0).
