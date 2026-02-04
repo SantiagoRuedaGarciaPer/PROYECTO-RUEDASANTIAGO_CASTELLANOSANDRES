@@ -130,6 +130,16 @@ body {
     border-top: 1px solid #eee;
 }
 
+.acciones a {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-decoration: none;
+}
+
 .boton {
     padding: 12px 20px;
     border: 2px solid #ddd;

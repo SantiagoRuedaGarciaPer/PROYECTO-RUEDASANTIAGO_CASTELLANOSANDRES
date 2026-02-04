@@ -3,7 +3,6 @@ Copiar
 
 /* =====================================================
    CONFIGURACIÓN GENERAL
-   Esto se aplica a toda la página: márgenes, fuente, fondo.
    ===================================================== */
 
 * {
@@ -29,8 +28,6 @@ body {
 
 /* =====================================================
    BARRA SUPERIOR DE NAVEGACIÓN
-   Se repite en todas las páginas del proyecto.
-   Está fija arriba para que siempre esté visible.
    ===================================================== */
 
 .barra_superior {
@@ -114,8 +111,6 @@ body {
 
 /* =====================================================
    CONTENIDO PRINCIPAL
-   Es la caja grande que contiene el título y el formulario.
-   Tiene un margen arriba para que no se tape con la barra.
    ===================================================== */
 
 .contenido-principal {
@@ -126,7 +121,6 @@ body {
 
 /* =====================================================
    ENCABEZADO DE LA PÁGINA
-   El título, el icono y el texto explicativo.
    ===================================================== */
 
 .encabezado-pagina {
@@ -160,7 +154,6 @@ body {
 
 /* =====================================================
    FORMULARIO DE REPORTE
-   La caja blanca donde están todos los campos.
    ===================================================== */
 
 .formulario-reporte {
@@ -175,8 +168,6 @@ body {
 
 /* =====================================================
    CADA CAMPO DEL FORMULARIO
-   Cada uno tiene una etiqueta (label) arriba y un
-   campo de entrada (input, select o textarea) abajo.
    ===================================================== */
 
 .campo-formulario {
@@ -233,7 +224,6 @@ body {
 
 /* =====================================================
    BOTONES DE ENVIAR Y LIMPIAR
-   Están al final del formulario, lado a lado.
    ===================================================== */
 
 .botones-formulario {
@@ -287,8 +277,6 @@ body {
 
 /* =====================================================
    DISEÑO RESPONSIVO (pantallas pequeñas)
-   Cuando la pantalla es pequeña, los botones del menú
-   solo muestran los iconos y el formulario se ajusta.
    ===================================================== */
 
 @media (max-width: 768px) {
