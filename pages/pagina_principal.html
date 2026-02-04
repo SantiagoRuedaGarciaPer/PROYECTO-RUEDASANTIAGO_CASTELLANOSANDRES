@@ -1,28 +1,36 @@
+Pagina principal documentado · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Iconos del sitio -->
     <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/favicon/site.webmanifest" />
 
+    <!-- Configuración básica -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    
+    <!-- Archivos de estilos -->
     <link rel="stylesheet" href="../styles/styles.css">
     <link rel="stylesheet" href="../styles/style-pagina-principal.css">
+    
     <title>Kario Media</title>
 </head>
+
 <body>
-     <!-- Barra superior de navegación principal -->
-     <header class="barra_superior">
+    <!-- Barra de navegación superior (siempre visible) -->
+    <header class="barra_superior">
         
-        <!-- Menú de navegación con accesos a las distintas secciones -->
+        <!-- Menú principal del lado izquierdo -->
         <nav class="tabla_contenido">
             <ul>
-
-                <!-- Acceso a la creación de nuevas tareas -->
+                <!-- Botón para añadir tareas -->
                 <li class="boton boton--hover">
                     <a href="./agregar-tarea.html">
                         <img src="../assets/imgs/Group 3.svg" alt="Añadir tarea">
@@ -30,7 +38,7 @@
                     </a>
                 </li>
         
-                <!-- Opción para actualizar la página actual -->
+                <!-- Botón para refrescar la página -->
                 <li class="boton boton--hover">
                     <a href="./pagina_principal.html">
                         <img src="../assets/imgs/Icon open-reload.svg" alt="Refrescar página">
@@ -38,7 +46,7 @@
                     </a>
                 </li>
     
-                <!-- Acceso a la sección de eliminación de tareas -->
+                <!-- Botón para eliminar tareas -->
                 <li class="boton boton--hover">
                     <a href="./eliminar-tarea.html">
                         <img src="../assets/imgs/Icon material-delete-forever.svg" alt="Eliminar tareas">
@@ -46,14 +54,14 @@
                     </a>
                 </li>
                 
-                <!-- Redirección a la página principal -->
+                <!-- Logo que lleva al inicio -->
                 <li class="boton boton--hover">
                     <a href="./pagina_principal.html">
                         <img src="../assets/imgs/kario sin kairo.svg" alt="Inicio">
                     </a>
                 </li>
                 
-                <!-- Opción para reportar errores o incidencias -->
+                <!-- Botón para reportar problemas -->
                 <li class="boton boton--hover">
                     <a href="../pages/reportar.html">
                         <img src="../assets/imgs/Icon material-bug-report.svg" alt="Reportar incidencias">
@@ -61,7 +69,7 @@
                     </a>
                 </li>
         
-                <!-- Acceso a la sección de ayuda para el usuario -->
+                <!-- Botón de ayuda -->
                 <li class="boton boton--hover">
                     <a href="./ayuda.html">
                         <img src="../assets/imgs/icono_pregunta.svg" alt="Ayuda">
@@ -71,7 +79,7 @@
             </ul>
         </nav>
         
-        <!-- Zona derecha de la barra: configuración, notificaciones y perfil -->
+        <!-- Iconos del lado derecho (configuración, notificaciones y perfil) -->
         <div class="footer_superior">
             <img src="../assets/imgs/Icon ionic-ios-settings.svg" width="20" alt="Configuración">
             <img src="../assets/imgs/Icon material-notifications-active.svg" width="20" alt="Notificaciones">
@@ -79,13 +87,20 @@
         </div> 
     </header>
 
+    <!-- Contenedor principal de la página -->
     <div class="article_container">
+        
+        <!-- Encabezado de la sección -->
         <div>
             <h1>Panel de indicadores</h1>
             <p>Aqui puedes visualizar los indicadores propuestos y añadidos por tu equipo de trabajo</p>
         </div>
+        
+        <!-- Tabla de indicadores -->
         <article class="container">
             <div class="list">
+                
+                <!-- Fila de títulos (encabezado de la tabla) -->
                 <div class="rowcontainer">
                     <div class="rowtitle">
                         <strong>Indicador</strong>
@@ -99,6 +114,8 @@
                         <strong>Area</strong>
                     </div>
                 </div>
+                
+                <!-- Fila 1: Modelado 3D -->
                 <div class="rowcontainer">
                     <div class="row">
                         <span>Modelado 3D</span>
@@ -113,6 +130,8 @@
                     </div>
                     <img class="mover" src="../assets/imgs/Repeat Grid 2.svg" alt="">
                 </div>
+                
+                <!-- Fila 2: Finca Galeon -->
                 <div class="rowcontainer">
                     <div class="row">
                         <span>Finca Galeon</span>
@@ -127,6 +146,8 @@
                     </div>
                     <img class="mover" src="../assets/imgs/Repeat Grid 2.svg" alt="">
                 </div>
+                
+                <!-- Fila 3: Colegios privados -->
                 <div class="rowcontainer">
                     <div class="row">
                         <span>Colegios privados</span>
@@ -141,6 +162,8 @@
                     </div>
                     <img class="mover" src="../assets/imgs/Repeat Grid 2.svg" alt="">
                 </div>
+                
+                <!-- Fila 4: Electrodomesticos -->
                 <div class="rowcontainer">
                     <div class="row">
                         <span>Electrodomesticos</span>
@@ -155,6 +178,8 @@
                     </div>
                     <img class="mover" src="../assets/imgs/Repeat Grid 2.svg" alt="">
                 </div>
+                
+                <!-- Fila 5: Estrato-2 Floridablanca -->
                 <div class="rowcontainer">
                     <div class="row">
                         <span>Estrato-2 Floridablanca</span>
@@ -169,6 +194,8 @@
                     </div>
                     <img class="mover" src="../assets/imgs/Repeat Grid 2.svg" alt="">
                 </div>
+                
+                <!-- Fila 6: Jovenes en accion -->
                 <div class="rowcontainer">
                     <div class="row">
                         <span>Jovenes en accion</span>
@@ -184,16 +211,16 @@
                     <img class="mover" src="../assets/imgs/Repeat Grid 2.svg" alt="">
                 </div>
                 
+                <!-- Botón para añadir más elementos -->
                 <div class="button_añadir">
                     <a href="./agregar-tarea.html">
                         <button class="añadir">Añadir Elementos</button>
                     </a>
-                    
                 </div>
+                
             </div>
         </article>
     </div>
-
+    
 </body>
-
 </html>
