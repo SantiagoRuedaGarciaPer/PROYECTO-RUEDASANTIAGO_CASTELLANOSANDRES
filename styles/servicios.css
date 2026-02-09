@@ -1,0 +1,58 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+
+  }
+  
+
+  .table-container {
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+    background-color: #f5f5f5;
+  }
+  
+  caption {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .table-container h1 {
+    margin-top: 10%;
+    color: #ff721b;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+
+  }
+  
+  thead th {
+    background-color: #ff721b;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #dfdbd9;
+  }
+  
+  th[scope="row"] {
+    text-align: left;
+  }
