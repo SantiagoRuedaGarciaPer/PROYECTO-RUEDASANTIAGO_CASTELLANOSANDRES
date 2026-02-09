@@ -25,6 +25,18 @@
         padding: 2% 20% 10%;
     }
 }
+@keyframes showDiv2 {
+    from{
+        
+        opacity: 0;
+    }
+    
+    to{
+        
+        visibility: visible;
+        opacity: 1;
+    }
+}
 
 @keyframes disapear {
     from{
@@ -76,7 +88,7 @@ body{
     
     animation: showDiv 1s 6s;
     
-    animation-fill-mode: forwards;
+    
     animation-fill-mode: forwards;
     color: gray;
     background-color: white;
@@ -131,4 +143,14 @@ button{
 }
 .terminos{
     display: block;
+}
+
+@media (max-width: 780px) {
+    .login_container{
+        animation: showDiv2 1s 6s;
+        animation-fill-mode: forwards;
+        padding: 5px;
+        width: 80%;
+    }
+   
 }
