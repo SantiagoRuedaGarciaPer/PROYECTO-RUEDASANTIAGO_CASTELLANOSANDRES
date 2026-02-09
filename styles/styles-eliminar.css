@@ -253,11 +253,11 @@ body {
     
     .boton a {
         font-size: 0;
-        padding: 10px;
+        padding: 5px;
     }
-    
+
     .boton img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
 }
