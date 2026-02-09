@@ -149,7 +149,8 @@ button{
     .login_container{
         animation: showDiv2 1s 6s;
         animation-fill-mode: forwards;
-        padding: 0px;
-
+        padding: 5px;
+        width: 80%;
     }
+   
 }
